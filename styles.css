@@ -153,6 +153,13 @@ body {
   pointer-events: auto;
 }
 
+/* Desktop default: ocultar TODO lo móvil */
+.mobile-menu,
+.overlay,
+.menu-toggle {
+  display: none;
+}
+
 .hero {
   position: relative;
   padding: 96px 0 72px;
