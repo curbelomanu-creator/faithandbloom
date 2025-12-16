@@ -343,21 +343,21 @@ section {
   box-shadow: 0 12px 30px rgba(42, 36, 34, 0.06);
 }
 
-.founder-photo {
+.founder-image {
+  border-radius: 16px;
+  overflow: hidden;
   width: 100%;
-  height: 240px;
-  max-height: 260px;
-  object-fit: cover;
+  height: 360px;
   margin: 10px 0 14px;
-  border-radius: 999px 999px 12px 12px;
   box-shadow: 0 12px 28px rgba(42, 36, 34, 0.12);
 }
 
-@supports (clip-path: ellipse(75% 100% at 50% 0%)) {
-  .founder-photo {
-    border-radius: 12px;
-    clip-path: ellipse(80% 95% at 50% 0%);
-  }
+.founder-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .founder-card h3 {
@@ -546,6 +546,7 @@ footer {
     margin-left: auto;
     order: 2;
   }
+  .founder-image { height: 300px; }
 }
 
 @media (max-width: 700px) {
