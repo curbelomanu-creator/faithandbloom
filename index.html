@@ -7,247 +7,145 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #fbf5ef;
-      --paper: #fffaf6;
-      --rose: #d8a7a3;
-      --ink: #2a2422;
-      --muted: #6f6460;
-      --line: #eadbd6;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, Arial;
-      background: var(--bg);
-      color: var(--ink);
-    }
-
-    .wrap {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 22px;
-    }
-
-    header.hero {
-      position: relative;
-      padding: 88px 0 52px;
-      overflow: hidden;
-      background: linear-gradient(180deg, var(--paper), var(--bg));
-      border-bottom: 1px solid var(--line);
-    }
-
-    .hero h1 {
-      font-family: "Playfair Display", serif;
-      letter-spacing: 0.12em;
-      font-weight: 600;
-      font-size: 44px;
-      margin: 0 0 12px;
-      text-transform: uppercase;
-    }
-
-    .hero p {
-      max-width: 720px;
-      color: var(--muted);
-      line-height: 1.8;
-      margin: 0 0 22px;
-    }
-
-    .cta { display: flex; gap: 12px; flex-wrap: wrap; }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 18px;
-      border: 1px solid var(--rose);
-      color: var(--ink);
-      text-decoration: none;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 12px;
-      background: transparent;
-    }
-
-    .btn.fill { background: rgba(216, 167, 163, 0.18); }
-
-    section { padding: 56px 0; border-bottom: 1px solid var(--line); }
-
-    .kicker {
-      font-family: "Playfair Display", serif;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--rose);
-      font-size: 14px;
-      margin: 0 0 10px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 28px;
-      align-items: start;
-    }
-
-    .card {
-      background: rgba(255, 250, 246, 0.75);
-      border: 1px solid var(--line);
-      padding: 22px;
-    }
-
-    .founder-card {
-      position: relative;
-      border-left: 4px solid var(--rose);
-      background: linear-gradient(135deg, rgba(255, 250, 246, 0.95), rgba(234, 219, 214, 0.2));
-      box-shadow: 0 12px 30px rgba(42, 36, 34, 0.06);
-    }
-
-    .founder-card h3 {
-      font-family: "Playfair Display", serif;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin: 0 0 6px;
-      font-size: 16px;
-      color: var(--rose);
-    }
-
-    .founder-role {
-      margin: 0 0 14px;
-      color: var(--muted);
-      font-size: 13px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .signature {
-      margin-top: 16px;
-      font-family: "Playfair Display", serif;
-      font-style: italic;
-      color: var(--ink);
-    }
-
-    .form-card {
-      padding: 0;
-      overflow: hidden;
-    }
-
-    .form-frame {
-      display: block;
-      width: 100%;
-      min-height: 780px;
-      border: 0;
-      background: #fff;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-
-    .card h3 { font-family: "Playfair Display", serif; margin: 0 0 8px; }
-
-    .card p {
-      margin: 0 0 12px;
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: 14px;
-    }
-
-    footer { padding: 26px 0; color: var(--muted); font-size: 13px; }
-
-    @media (max-width: 900px) {
-      .grid-2 { grid-template-columns: 1fr; }
-      .cards { grid-template-columns: 1fr 1fr; }
-      .hero h1 { font-size: 34px; }
-    }
-
-    @media (max-width: 520px) { .cards { grid-template-columns: 1fr; } }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="wrap">
-      <h1>Faith &amp; Bloom</h1>
-      <p>Recursos, libros y experiencias creadas para inspirar una vida arraigada en fe, propósito y belleza.</p>
-      <div class="cta">
-        <a class="btn fill" href="#lista">Únete a la lista de espera</a>
-        <a class="btn" href="#historia">Más información</a>
-      </div>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="brand">Faith &amp; Bloom</div>
+      <nav class="nav" aria-label="Principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#historia">Nuestra historia</a>
+        <a href="#proximamente">Próximamente</a>
+        <a href="#lista">Comunidad</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a class="btn fill" href="#lista" aria-label="Ir a la lista de espera">Unirme</a>
     </div>
   </header>
 
-  <section id="historia">
-    <div class="wrap grid-2">
-      <div>
-        <h2 style="font-family: Playfair Display, serif; margin: 0 0 12px; font-size: 38px; letter-spacing: 0.1em; text-transform: uppercase;">NUESTRA HISTORIA</h2>
-        <h3 style="font-family: Playfair Display, serif; margin: 0 0 16px; font-size: 22px; font-weight: 600;">Una visión que florece desde la fe…</h3>
-        <p style="color: var(--muted); line-height: 1.9; margin: 0 0 14px;">
-          Faith &amp; Bloom Co. nació del deseo profundo de crear recursos que eleven el alma, despierten propósito y llenen los días de belleza. Creemos que una vida florece cuando está arraigada en la fe, y que la creatividad, cuando se entrega a Dios, se convierte en un puente para inspirar, sanar y transformar.
-        </p>
-        <p style="color: var(--muted); line-height: 1.9; margin: 0 0 14px;">
-          Cada libro, cada ilustración y cada producto que diseñamos tiene un propósito: recordarte que tu historia importa, que tu fe tiene poder, y que Dios sigue entretejiendo belleza aún en las temporadas más difíciles.
-        </p>
-        <p style="color: var(--muted); line-height: 1.9; margin: 0;">
-          Esta marca es más que una tienda. Es un hogar creativo donde la fe, el arte y la excelencia se encuentran.
-        </p>
-      </div>
-      <div class="card founder-card">
-        <h3>SOBRE LA FUNDADORA</h3>
-        <h2 style="font-family: Playfair Display, serif; margin: 0 0 6px; font-size: 22px;">Ana Cristina Misla</h2>
-        <p class="founder-role">Fundadora &amp; Escritora de Faith &amp; Bloom Co.</p>
-        <p style="margin: 0 0 12px; color: var(--muted); line-height: 1.75;">
-          Faith &amp; Bloom Co. nació en mi corazón mucho antes de convertirse en una marca. Surgió en esos momentos silenciosos donde entendí que Dios usa historias, aun las más sencillas, para despertar fe y recordarnos que Su gracia siempre florece a tiempo.
-        </p>
-        <p style="margin: 0 0 12px; color: var(--muted); line-height: 1.75;">
-          Desde joven he amado escribir, enseñar y crear espacios donde la fe respire con belleza y propósito. Descubrí que las palabras pueden ser semillas capaces de transformar vidas cuando llevan esperanza y verdad.
-        </p>
-        <p style="margin: 0 0 12px; color: var(--muted); line-height: 1.75;">
-          Faith &amp; Bloom Co. es mi manera de cultivar esas semillas. Aquí uno mi pasión por la narrativa, mi deseo de edificar a otras mujeres y mi visión de crear recursos que inspiren y acompañen. Cada proyecto, desde devocionales hasta libros ilustrados para niños, nace con un mismo anhelo: que tu fe florezca en las manos del Dios que hace nuevas todas las cosas.
-        </p>
-        <p style="margin: 0 0 6px; color: var(--muted); line-height: 1.75;">
-          Mi oración es que cada página te recuerde que tu historia también está floreciendo.
-        </p>
-        <div class="signature">Con amor,</div>
-        <a class="btn" href="#contacto" style="margin-top: 14px; display: inline-block;">Contactar</a>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="kicker">Próximamente</div>
-      <h2 style="font-family: Playfair Display, serif; margin: 0 0 18px;">Estamos trabajando en algo hermoso…</h2>
-      <div class="cards">
-        <div class="card"><h3>Libros &amp; Devocionales</h3><p>Descripción corta.</p><a class="btn" href="#">Más info</a></div>
-        <div class="card"><h3>Niños</h3><p>Descripción corta.</p><a class="btn" href="#">Más info</a></div>
-        <div class="card"><h3>Papelería</h3><p>Descripción corta.</p><a class="btn" href="#">Más info</a></div>
-        <div class="card"><h3>Cursos</h3><p>Descripción corta.</p><a class="btn" href="#">Más info</a></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="lista">
-    <div class="wrap grid-2">
-      <div>
-        <div class="kicker">Únete a nuestra comunidad</div>
-        <p style="color: var(--muted); line-height: 1.9; margin: 0 0 12px;">
-          Déjanos tu correo para recibir noticias, recursos y adelantos de Faith &amp; Bloom directamente en tu bandeja.
-        </p>
-        <div class="card form-card">
-          <iframe class="form-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSclmPHSxiPpO-oFiRFfB5qZJzaNbts_UpKYwY4lsrBGeQxn4w/viewform?embedded=true" width="640" height="820" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+  <main>
+    <section class="hero reveal" id="inicio">
+      <div class="wrap hero-content">
+        <h1>Faith &amp; Bloom</h1>
+        <p class="hero-text">Recursos, libros y experiencias creadas para inspirar una vida arraigada en fe, propósito y belleza.</p>
+        <div class="cta">
+          <a class="btn fill" href="#lista">Únete a la lista de espera</a>
+          <a class="btn" href="#historia">Más información</a>
         </div>
       </div>
-      <div class="card" id="contacto">
-        <div class="kicker">Colaboraciones</div>
-        <p style="margin: 0; color: var(--muted); line-height: 1.8;">faithandbloomcompany@gmail.com<br>+1 (787) 679-0009</p>
+    </section>
+
+    <section id="historia" class="reveal">
+      <div class="wrap grid-2">
+        <div>
+          <div class="kicker">Nuestra historia</div>
+          <h2 class="section-title">NUESTRA HISTORIA</h2>
+          <h3 class="section-subtitle">Una visión que florece desde la fe…</h3>
+          <p class="text">Faith &amp; Bloom Co. nació del deseo profundo de crear recursos que eleven el alma, despierten propósito y llenen los días de belleza. Creemos que una vida florece cuando está arraigada en la fe, y que la creatividad, cuando se entrega a Dios, se convierte en un puente para inspirar, sanar y transformar.</p>
+          <p class="text">Cada libro, cada ilustración y cada producto que diseñamos tiene un propósito: recordarte que tu historia importa, que tu fe tiene poder, y que Dios sigue entretejiendo belleza aún en las temporadas más difíciles.</p>
+          <p class="text">Esta marca es más que una tienda. Es un hogar creativo donde la fe, el arte y la excelencia se encuentran.</p>
+        </div>
+        <div class="card founder-card reveal">
+          <h3>SOBRE LA FUNDADORA</h3>
+          <h2 class="founder-name">Ana Cristina Misla</h2>
+          <p class="founder-role">Fundadora &amp; Escritora de Faith &amp; Bloom Co.</p>
+          <p class="text">Faith &amp; Bloom Co. nació en mi corazón mucho antes de convertirse en una marca. Surgió en esos momentos silenciosos donde entendí que Dios usa historias, aun las más sencillas, para despertar fe y recordarnos que Su gracia siempre florece a tiempo.</p>
+          <p class="text">Desde joven he amado escribir, enseñar y crear espacios donde la fe respire con belleza y propósito. Descubrí que las palabras pueden ser semillas capaces de transformar vidas cuando llevan esperanza y verdad.</p>
+          <p class="text">Faith &amp; Bloom Co. es mi manera de cultivar esas semillas. Aquí uno mi pasión por la narrativa, mi deseo de edificar a otras mujeres y mi visión de crear recursos que inspiren y acompañen. Cada proyecto, desde devocionales hasta libros ilustrados para niños, nace con un mismo anhelo: que tu fe florezca en las manos del Dios que hace nuevas todas las cosas.</p>
+          <p class="text">Mi oración es que cada página te recuerde que tu historia también está floreciendo.</p>
+          <div class="signature">Con amor,</div>
+          <a class="btn mt-md" href="#contacto">Contactar</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="proximamente" class="reveal">
+      <div class="wrap">
+        <div class="kicker">Próximamente</div>
+        <h2 class="section-subtitle">Estamos trabajando en algo hermoso…</h2>
+        <div class="cards">
+          <a class="card card-link reveal" href="#">
+            <h3>Libros &amp; Devocionales</h3>
+            <p>Historias, reflexiones y devocionales creados para acompañar tu caminar diario.</p>
+            <span class="btn">Más info</span>
+          </a>
+          <a class="card card-link reveal" href="#">
+            <h3>Niños</h3>
+            <p>Recursos ilustrados para sembrar fe y creatividad en los más pequeños.</p>
+            <span class="btn">Más info</span>
+          </a>
+          <a class="card card-link reveal" href="#">
+            <h3>Papelería</h3>
+            <p>Agendas, tarjetas y piezas para celebrar lo cotidiano con belleza.</p>
+            <span class="btn">Más info</span>
+          </a>
+          <a class="card card-link reveal" href="#">
+            <h3>Cursos</h3>
+            <p>Experiencias guiadas para cultivar propósito, creatividad y fe.</p>
+            <span class="btn">Más info</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="lista" class="reveal">
+      <div class="wrap grid-2">
+        <div>
+          <div class="kicker">Únete a nuestra comunidad</div>
+          <h2 class="section-subtitle">Recibe adelantos, recursos y noticias</h2>
+          <p class="text">Completa este mini formulario y abre el formulario completo para sumarte a la lista. Creamos recursos con excelencia y queremos que seas la primera en conocerlos.</p>
+          <div class="card form-card reveal">
+            <form id="mini-form">
+              <label for="name">Nombre completo</label>
+              <input id="name" name="name" type="text" placeholder="Tu nombre" required>
+
+              <label for="email">Correo electrónico</label>
+              <input id="email" name="email" type="email" placeholder="tu@correo.com" required>
+
+              <label for="interes">¿Qué te gustaría recibir?</label>
+              <select id="interes" name="interes">
+                <option>Devocionales y libros</option>
+                <option>Recursos para niños</option>
+                <option>Papelería y descargables</option>
+                <option>Cursos y experiencias</option>
+              </select>
+
+              <label for="mensaje">Cuéntanos más (opcional)</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Quiero recibir..."></textarea>
+
+              <div class="form-cta">
+                <button type="submit" class="btn fill">Unirme a la lista</button>
+                <button type="button" class="form-iframe-btn" id="open-form">Abrir formulario completo</button>
+              </div>
+              <p class="form-note">Al enviar, abriremos el formulario oficial (Google Forms) para confirmar tus datos.</p>
+            </form>
+          </div>
+        </div>
+        <div class="card reveal" id="contacto">
+          <div class="kicker">Colaboraciones</div>
+          <p class="text no-margin">faithandbloomcompany@gmail.com<br>+1 (787) 679-0009</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <div class="wrap">© 2025 — Estilo Faith &amp; Bloom (demo).</div>
   </footer>
+
+  <div class="modal-backdrop" id="form-modal" role="dialog" aria-modal="true" aria-label="Formulario de lista de espera">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Lista de espera</h3>
+        <button class="modal-close" id="close-modal" aria-label="Cerrar formulario">×</button>
+      </div>
+      <div class="modal-body">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSclmPHSxiPpO-oFiRFfB5qZJzaNbts_UpKYwY4lsrBGeQxn4w/viewform?embedded=true" title="Formulario de la lista de espera">Cargando…</iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
