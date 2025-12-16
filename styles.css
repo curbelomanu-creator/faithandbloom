@@ -258,6 +258,14 @@ section {
   box-shadow: 0 12px 30px rgba(42, 36, 34, 0.06);
 }
 
+.founder-photo {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  object-fit: cover;
+  box-shadow: 0 12px 28px rgba(42, 36, 34, 0.12);
+}
+
 .founder-card h3 {
   font-family: "Playfair Display", serif;
   letter-spacing: 0.12em;
@@ -293,6 +301,8 @@ section {
   display: grid;
   gap: 12px;
 }
+
+.lead { max-width: 760px; }
 
 .form-card label {
   font-size: 14px;
