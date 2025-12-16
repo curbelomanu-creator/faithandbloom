@@ -531,16 +531,21 @@ footer {
   .cards { grid-template-columns: 1fr 1fr; }
   .hero h1 { font-size: 34px; }
   .topbar-inner { flex-wrap: nowrap; }
-  .nav { display: none; }
-  .menu-toggle { display: flex; }
+}
 
-  /* Mostrar los elementos móviles solo en mobile */
-  .mobile-menu { display: block; }
-  .overlay { display: block; }
-
-  /* Asegurar que el panel esté fuera de pantalla cuando NO está abierto */
-  .mobile-menu { right: -110%; }
-  .mobile-menu.open { right: 0; }
+@media (max-width: 768px) {
+  .nav-desktop { display: none; }
+  .topbar .btn { display: none; }
+  .topbar-inner {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .logo { order: 1; }
+  .menu-toggle {
+    display: flex;
+    margin-left: auto;
+    order: 2;
+  }
 }
 
 @media (max-width: 700px) {
