@@ -96,6 +96,50 @@
       padding: 22px;
     }
 
+    .founder-card {
+      position: relative;
+      border-left: 4px solid var(--rose);
+      background: linear-gradient(135deg, rgba(255, 250, 246, 0.95), rgba(234, 219, 214, 0.2));
+      box-shadow: 0 12px 30px rgba(42, 36, 34, 0.06);
+    }
+
+    .founder-card h3 {
+      font-family: "Playfair Display", serif;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin: 0 0 6px;
+      font-size: 16px;
+      color: var(--rose);
+    }
+
+    .founder-role {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .signature {
+      margin-top: 16px;
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      color: var(--ink);
+    }
+
+    .form-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .form-frame {
+      display: block;
+      width: 100%;
+      min-height: 780px;
+      border: 0;
+      background: #fff;
+    }
+
     .cards {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -149,11 +193,24 @@
           Esta marca es más que una tienda. Es un hogar creativo donde la fe, el arte y la excelencia se encuentran.
         </p>
       </div>
-      <div class="card">
-        <div class="kicker">Sobre la fundadora</div>
-        <h3>Ana Cristina Misla</h3>
-        <p>Bio breve + foto. (Mismo estilo editorial.)</p>
-        <a class="btn" href="#contacto">Contactar</a>
+      <div class="card founder-card">
+        <h3>SOBRE LA FUNDADORA</h3>
+        <h2 style="font-family: Playfair Display, serif; margin: 0 0 6px; font-size: 22px;">Ana Cristina Misla</h2>
+        <p class="founder-role">Fundadora &amp; Escritora de Faith &amp; Bloom Co.</p>
+        <p style="margin: 0 0 12px; color: var(--muted); line-height: 1.75;">
+          Faith &amp; Bloom Co. nació en mi corazón mucho antes de convertirse en una marca. Surgió en esos momentos silenciosos donde entendí que Dios usa historias, aun las más sencillas, para despertar fe y recordarnos que Su gracia siempre florece a tiempo.
+        </p>
+        <p style="margin: 0 0 12px; color: var(--muted); line-height: 1.75;">
+          Desde joven he amado escribir, enseñar y crear espacios donde la fe respire con belleza y propósito. Descubrí que las palabras pueden ser semillas capaces de transformar vidas cuando llevan esperanza y verdad.
+        </p>
+        <p style="margin: 0 0 12px; color: var(--muted); line-height: 1.75;">
+          Faith &amp; Bloom Co. es mi manera de cultivar esas semillas. Aquí uno mi pasión por la narrativa, mi deseo de edificar a otras mujeres y mi visión de crear recursos que inspiren y acompañen. Cada proyecto, desde devocionales hasta libros ilustrados para niños, nace con un mismo anhelo: que tu fe florezca en las manos del Dios que hace nuevas todas las cosas.
+        </p>
+        <p style="margin: 0 0 6px; color: var(--muted); line-height: 1.75;">
+          Mi oración es que cada página te recuerde que tu historia también está floreciendo.
+        </p>
+        <div class="signature">Con amor,</div>
+        <a class="btn" href="#contacto" style="margin-top: 14px; display: inline-block;">Contactar</a>
       </div>
     </div>
   </section>
@@ -175,9 +232,12 @@
     <div class="wrap grid-2">
       <div>
         <div class="kicker">Únete a nuestra comunidad</div>
-        <p style="color: var(--muted); line-height: 1.9; margin: 0;">
-          Texto + formulario (Mailchimp / FluentCRM / ConvertKit).
+        <p style="color: var(--muted); line-height: 1.9; margin: 0 0 12px;">
+          Déjanos tu correo para recibir noticias, recursos y adelantos de Faith &amp; Bloom directamente en tu bandeja.
         </p>
+        <div class="card form-card">
+          <iframe class="form-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSclmPHSxiPpO-oFiRFfB5qZJzaNbts_UpKYwY4lsrBGeQxn4w/viewform?embedded=true" width="640" height="820" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+        </div>
       </div>
       <div class="card" id="contacto">
         <div class="kicker">Colaboraciones</div>
