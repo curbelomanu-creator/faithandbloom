@@ -9,20 +9,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header class="topbar">
-    <div class="wrap topbar-inner">
-      <div class="brand">Faith &amp; Bloom</div>
-      <nav class="nav" aria-label="Principal">
-        <a href="#inicio">Inicio</a>
-        <a href="#historia">Nuestra historia</a>
-        <a href="#proximamente">Próximamente</a>
-        <a href="#lista">Comunidad</a>
-        <a href="#contacto">Contacto</a>
+  <body>
+    <header class="topbar">
+      <div class="wrap topbar-inner">
+        <div class="brand">Faith &amp; Bloom</div>
+        <nav class="nav" aria-label="Principal">
+          <a href="#inicio">Inicio</a>
+          <a href="#historia">Nuestra historia</a>
+          <a href="#proximamente">Próximamente</a>
+          <a href="#lista">Comunidad</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <button class="menu-toggle" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a class="btn fill" href="#lista" aria-label="Ir a la lista de espera">Unirme</a>
+      </div>
+    </header>
+
+    <div class="mobile-menu" aria-label="Menú móvil">
+      <nav class="mobile-nav">
+        <a href="#historia">Historia</a>
+        <a href="#colecciones">Colecciones</a>
+        <a href="#valores">Valores</a>
+        <a href="#lista" class="btn fill">Lista de espera</a>
+        <button class="close-menu" aria-label="Cerrar menú">Cerrar</button>
       </nav>
-      <a class="btn fill" href="#lista" aria-label="Ir a la lista de espera">Unirme</a>
     </div>
-  </header>
+    <div class="overlay"></div>
 
   <main>
     <section class="hero reveal" id="inicio">

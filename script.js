@@ -48,3 +48,24 @@ miniForm?.addEventListener('submit', (e) => {
   e.preventDefault();
   openModal();
 });
+
+// Mobile menu toggle
+const toggle = document.querySelector('.menu-toggle');
+const mobileMenu = document.querySelector('.mobile-menu');
+const overlay = document.querySelector('.overlay');
+const closeMenuBtn = document.querySelector('.close-menu');
+const mobileLinks = document.querySelectorAll('.mobile-nav a');
+
+function closeMenu() {
+  mobileMenu?.classList.remove('open');
+  overlay?.classList.remove('show');
+}
+
+toggle?.addEventListener('click', () => {
+  mobileMenu?.classList.toggle('open');
+  overlay?.classList.toggle('show');
+});
+
+overlay?.addEventListener('click', closeMenu);
+closeMenuBtn?.addEventListener('click', closeMenu);
+mobileLinks.forEach((link) => link.addEventListener('click', closeMenu));
