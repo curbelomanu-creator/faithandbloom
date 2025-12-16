@@ -153,6 +153,13 @@ body {
   pointer-events: auto;
 }
 
+/* Desktop default: ocultar TODO lo móvil */
+.mobile-menu,
+.overlay,
+.menu-toggle {
+  display: none;
+}
+
 .hero {
   position: relative;
   padding: 96px 0 72px;
@@ -526,6 +533,14 @@ footer {
   .topbar-inner { flex-wrap: nowrap; }
   .nav { display: none; }
   .menu-toggle { display: flex; }
+
+  /* Mostrar los elementos móviles solo en mobile */
+  .mobile-menu { display: block; }
+  .overlay { display: block; }
+
+  /* Asegurar que el panel esté fuera de pantalla cuando NO está abierto */
+  .mobile-menu { right: -110%; }
+  .mobile-menu.open { right: 0; }
 }
 
 @media (max-width: 700px) {
